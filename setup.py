@@ -21,7 +21,7 @@ REQUIRES_PYTHON = ">=3.7.0"
 VERSION = "0.1.0"
 
 # What packages are required for this module to be executed?
-REQUIRED = ["click"]
+REQUIRED = ["click", "requests"]
 
 # What packages are optional?
 EXTRAS = {
@@ -104,7 +104,7 @@ setup(
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # If your package is a single module, use this instead of 'packages':
     # py_modules=['mypackage'],
-    entry_points={"console_scripts": ["assult=assault.cli:cli"],},
+    entry_points={"console_scripts": ["assult=assault.cli:cli"]},
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
@@ -120,5 +120,5 @@ setup(
         "Programming Language :: Python :: Implementation :: PyPy",
     ],
     # $ setup.py publish support.
-    cmdclass={"upload": UploadCommand,},
+    cmdclass={"upload": UploadCommand},
 )

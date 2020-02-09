@@ -7,9 +7,11 @@ verify_ssl = true
 twine = "*"
 pylint = "*"
 black = "*"
+flake8 = "*"
 
 [packages]
 click = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
