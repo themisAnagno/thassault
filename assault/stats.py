@@ -95,3 +95,41 @@ class Results:
         2
         """
         return len([r for r in self.requests if r["status_code"] in range(200, 299)])
+
+    def rpm(self) -> int:
+        """
+        Returns the requests per minute
+
+        >>> results = Results(1.5, [{
+        ...     'status_code': 200,
+        ...     'request_time': 0.25
+        ... }, {
+        ...     'status_code': 500,
+        ...     'request_time': 1.0
+        ... }, {
+        ...     'status_code': 200,
+        ...     'request_time': 0.25
+        ... }])
+        >>> results.rpm()
+        120
+        """
+        return 60 * round(len(self.requests) / self.total_time)
+
+    def rps(self) -> int:
+        """
+        Returns the requests per minute
+
+        >>> results = Results(1.5, [{
+        ...     'status_code': 200,
+        ...     'request_time': 0.25
+        ... }, {
+        ...     'status_code': 500,
+        ...     'request_time': 1.0
+        ... }, {
+        ...     'status_code': 200,
+        ...     'request_time': 0.25
+        ... }])
+        >>> results.rps()
+        2
+        """
+        return round(self.rpm() / 60)
