@@ -12,10 +12,11 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = "assault"
+NAME = "thassault"
 DESCRIPTION = "Application for retrieving web load statistics"
-URL = "https://github.com/me/myproject"
-EMAIL = "thmanagnostopoulos@gmail.com"
+URL = "https://github.com/themisAnagno/thassault.git"
+DOWNLOAD_URL = "https://github.com/themisAnagno/thassault/archive/v0.1.0.zip"
+EMAIL = "them.anagno@gmail.com"
 AUTHOR = "Themis Anagnostopoulos"
 REQUIRES_PYTHON = ">=3.7.0"
 VERSION = "0.1.0"
@@ -24,9 +25,7 @@ VERSION = "0.1.0"
 REQUIRED = ["click", "requests"]
 
 # What packages are optional?
-EXTRAS = {
-    # 'fancy feature': ['django'],
-}
+EXTRAS = {}
 
 # The rest you shouldn't have to touch too much :)
 # ------------------------------------------------
@@ -104,7 +103,7 @@ setup(
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # If your package is a single module, use this instead of 'packages':
     # py_modules=['mypackage'],
-    entry_points={"console_scripts": ["assult=assault.cli:cli"]},
+    entry_points={"console_scripts": ["thassault=thassault.cli:cli"]},
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,

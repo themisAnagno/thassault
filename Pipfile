@@ -8,6 +8,7 @@ twine = "*"
 pylint = "*"
 black = "*"
 flake8 = "*"
+pycodestyle = "*"
 
 [packages]
 click = "*"

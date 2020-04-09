@@ -1,4 +1,4 @@
-# assault
+# thassault
 
 A CLI load testing tool for getting website data.
 
@@ -7,15 +7,15 @@ A CLI load testing tool for getting website data.
 Install using `pip`:
 
 ```
-$ pip install assault
+$ pip install thassault
 ```
 
 ## Usage
 
-The simplest usage of `assault` requires only a URL to test against and 500 requests synchronously (one at a time). This is what it would look like:
+The simplest usage of `thassault` requires only a URL to test against and 500 requests synchronously (one at a time). This is what it would look like:
 
 ```
-$ assault https://example.com
+$ thassault https://example.com
 .... Done!
 --- Results ---
 Successful requests     500
@@ -30,7 +30,7 @@ Requests Per Second     806
 If we want to add concurrency, we'll use the `-c` option, and we can use the `-r` option to specify how many requests that we'd like to make:
 
 ```
-$ assault -r 3000 -c 10 https://example.com
+$ thassault -r 3000 -c 10 https://example.com
 .... Done!
 --- Results ---
 Successful requests     3000
@@ -45,7 +45,7 @@ Requests Per Second     1250
 If you'd like to see these results in JSON format, you can use the `-j` option with a path to a JSON file:
 
 ```
-$ assault -r 3000 -c 10 -j output.json https://example.com
+$ thassault -r 3000 -c 10 -j output.json https://example.com
 .... Done!
 ```
 
@@ -63,7 +63,7 @@ Next, activate the virtualenv and get to work:
 ```
 $ pipenv shell
 ...
-(assault) $
+(thassault) $
 ```
 
 [1]: https://docs.pipenv.org/en/latest/
